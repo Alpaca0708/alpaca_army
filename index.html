@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <img src="https://images.truemii.com.tw/newsphoto/2021-12-28/1024/20211228400769.jpg"/>
+    <h1 id='content'>ellie home</h1>
+    <button onclick="animalWorld('fox')">click</button>
+    <img src="url" />
+
+    <style>
+        h1{
+            color:aquamarine
+        }
+        body{
+            background-color: black;
+            color:white;
+        }
+        
+    </style>
+    <script>
+        var food = 0
+        function animalWorld(any){
+            if(any=='fox'){
+                food = 3
+            }else if(any=='rabbit'){
+                food = 1
+            }else if(any=='sloth'){
+                food = 5
+            }else{
+                // console.log('不是可愛動物')
+                food = 0
+            }
+            console.log(any, food)
+            document.getElementById('content').innerHTML = any+'應該要吃'+food+'個蘿蔔！'
+        }
+
+    </script>
+</html>
