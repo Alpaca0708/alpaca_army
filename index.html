@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Practice Makes Perfect</title>
+        <h1 style="text-align: center; font-size: 24px; color: #677584; font-family: 'Courier New', Courier, monospace;">
+            
+          Practice Makes Perfect</h1>
+        
+        
+    </head>
+    <body>
+        <style>
+            .alpacaImg {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .transparent-button {
+                background: transparent;
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+            .hidden-text {
+                display: none;
+            }
+            .alpacaImg:hover {
+                transform: scale(1.1); 
+                transition: transform 0.3s; 
+            }
+
+            @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+            .cute-element {
+               animation: bounceAnimation 3s ease-in-out infinite;
+            }
+            .alpacaImg {
+            animation: bounce 1s infinite;
+            }
+        
+        </style>
+        
+        
+
+
+        <div style="display: flex; margin: 0px 200px;">
+            <div style="flex:1; text-align: center;">
+                <button  class="transparent-button"  onclick="clickOrangeAlpaca('text1')">
+                    <img class="alpacaImg" src="Alpaca.svg" alt="alpacaImg"/>
+                </button>
+                <P class="hidden-text" id="text1">ABC</P>
+
+            </div>
+            <div style="flex:2; text-align: center;">
+                <button  class="transparent-button"  onclick="clickOrangeAlpaca('text2')">
+                    <img class="alpacaImg" src="Alpaca(G).svg" alt="alpacaImg"/>
+                </button>
+                <P class=" hidden-text" id="text2">jwiqjewi</P>
+
+            </div>
+            <div style="flex:1;  text-align: center;">
+                <button  class="transparent-button"  onclick="clickOrangeAlpaca('text3')">
+                    <img class="alpacaImg" src="Alpaca(R).svg" alt="alpacaImg"/>
+                </button>
+                <P class=" hidden-text" id="text3">jwiqjewi</P>
+
+            </div>
+        </div>
+        <script>
+            function clickOrangeAlpaca(textId){
+                console.log('1')
+                const textElement = document.getElementById(textId);
+                let sentences = ['bobobo','wowowo','cacaca']
+                function getRandomInt(max) {
+                    return Math.floor(Math.random() * max);
+                }
+                console.log('2')
+
+                let pickSentence = sentences[getRandomInt(sentences.length)]
+                console.log(pickSentence)
+
+                textElement.innerText=pickSentence
+
+                textElement.classList.remove('hidden-text');
+
+            }
+        </script>
+       
+       
+
+    </body>
+</html>
