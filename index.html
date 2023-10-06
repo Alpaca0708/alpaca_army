@@ -2,14 +2,35 @@
 <html> 
     <head>
         <title>Practice Makes Perfect</title>
-        <h1 style="text-align: center; font-size: 24px; color: #677584; font-family: 'Courier New', Courier, monospace;">
-            
-          Practice Makes Perfect</h1>
-        
+        <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
+       
         
     </head>
     <body>
         <style>
+           
+            /* @media (min-width: 576px) {
+                .text-Style{
+                    color:blue
+                }
+            }
+            @media (min-width: 920px) {
+                .text-Style{
+                    color:red
+                }
+            } */
+            #bigDiv{
+                flex-direction: column;
+                display: flex; 
+                margin: 0px 50px;
+            }
+            @media (min-width: 540px){ 
+                #bigDiv {
+                    display: flex; 
+                    margin: 0px 200px;
+                    flex-direction: row;
+                }
+            }
             .alpacaImg {
                 max-width: 100%;
                 max-height: 100%;
@@ -49,28 +70,31 @@
         </style>
         
         
+        <h1 style="text-align: center; font-size: 24px; color: #677584; font-family: 'Courier New', Courier, monospace;">
+            Practice Makes Perfect
+        </h1>
+          
 
-
-        <div style="display: flex; margin: 0px 200px;">
+        <div id="bigDiv">
             <div style="flex:1; text-align: center;">
                 <button  class="transparent-button"  onclick="clickOrangeAlpaca('text1')">
                     <img class="alpacaImg" src="Alpaca.svg" alt="alpacaImg"/>
                 </button>
-                <P class="hidden-text" id="text1">ABC</P>
+                <P class="hidden-text text-Style" id="text1">ABC</P>
 
             </div>
             <div style="flex:2; text-align: center;">
                 <button  class="transparent-button"  onclick="clickOrangeAlpaca('text2')">
                     <img class="alpacaImg" src="Alpaca(G).svg" alt="alpacaImg"/>
                 </button>
-                <P class=" hidden-text" id="text2">jwiqjewi</P>
+                <P class="hidden-text text-Style" id="text2">jwiqjewi</P>
 
             </div>
             <div style="flex:1;  text-align: center;">
                 <button  class="transparent-button"  onclick="clickOrangeAlpaca('text3')">
                     <img class="alpacaImg" src="Alpaca(R).svg" alt="alpacaImg"/>
                 </button>
-                <P class=" hidden-text" id="text3">jwiqjewi</P>
+                <p class="hidden-text text-Style" id="text3">jwiqjewi</p>
 
             </div>
         </div>
