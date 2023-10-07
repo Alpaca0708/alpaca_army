@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html> 
     <head>
-        <title>Practice Makes Perfect</title>
-        <meta name=”viewport” content=”width=device-width, initial-scale=1.0">
+        <title>Alpaca Army</title>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
        
         
     </head>
@@ -19,18 +19,37 @@
                     color:red
                 }
             } */
+            .text-Style{
+                font-size: 20px;
+                border: 1px solid gray;
+                padding: 20px;
+                border-radius: 10px;
+                color: gray
+            }
+            .text-Style:hover{
+                font-size: 20px;
+                border: 1px solid white;
+                padding: 20px;
+                border-radius: 10px;
+                color: white;
+                background-color: gray;
+            }
+
+           
             #bigDiv{
-                flex-direction: row;
+                flex-direction: column;
                 display: flex; 
                 margin: 0px 50px;
             }
-            @media (min-width: 370px) and (max-width:420px){ 
+          
+            @media (min-width:570px){ 
                 #bigDiv {
                     display: flex; 
                     margin: 0px 200px;
-                    flex-direction: column;
+                    flex-direction: row;
                 }
             }
+            
             .alpacaImg {
                 max-width: 100%;
                 max-height: 100%;
@@ -45,7 +64,7 @@
                 display: none;
             }
             .alpacaImg:hover {
-                transform: scale(1.1); 
+                transform: scale(1.1) translateY(-20px); 
                 transition: transform 0.3s; 
             }
 
@@ -54,10 +73,10 @@
                 transform: translateY(0);
             }
             40% {
-                transform: translateY(-20px);
+                transform: translateY(-80px);
             }
             60% {
-                transform: translateY(-10px);
+                transform: translateY(-20px);
             }
         }
             .cute-element {
@@ -66,13 +85,17 @@
             .alpacaImg {
             animation: bounce 1s infinite;
             }
+
+            
         
         </style>
         
         
-        <h1 style="text-align: center; font-size: 24px; color: #677584; font-family: 'Courier New', Courier, monospace;">
+        <h1 style="text-align: center; font-size: 24px; color: #677584; font-family: system-ui'', Courier, monospace;">
             Practice Makes Perfect
         </h1>
+        <img id="footerImg" src="Alpaca點陣圖像.svg" alt="footerImg"/>
+
           
 
         <div id="bigDiv">
@@ -92,7 +115,7 @@
             </div>
             <div style="flex:1;  text-align: center;">
                 <button  class="transparent-button"  onclick="clickOrangeAlpaca('text3')">
-                    <img class="alpacaImg" src="Alpaca(R).svg" alt="alpacaImg"/>
+                    <img class="alpacaImg cute-element" src="Alpaca(R).svg" alt="alpacaImg"/>
                 </button>
                 <p class="hidden-text text-Style" id="text3">jwiqjewi</p>
 
@@ -115,10 +138,50 @@
 
                 textElement.classList.remove('hidden-text');
 
+                // document.getElementById('footerImg').style.display='flex-end'
+
+
             }
         </script>
        
+       <style>
        
+        #footerImg {
+            width: 10% ;
+            animation:jumpRight 20s ease-in-out infinite;
+            display:flex-end;
+        }    
+        
+        @keyframes jumpRight{
+           /* 0%, 100% {
+                transform: translate(-50%, 0);
+            }
+            15%, 30%, 45%, 60%, 70%, 85%{
+                transform: translate(-50%, -20px);
+            }
+            */
+            0%, 100% {
+                transform: translateX(-100%);
+             }
+            10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
+                transform: translateX(1000%);
+             }
+            /* 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+                transform: translateX(-100%) translateY(-20px);
+    } */
+
+
+            }
+            
+        
+
+        </style>
+
+        
+            
+
+
+         
 
     </body>
 </html>
